@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection</title>
+</head>
+<body>
+    <h1>Face Detection</h1>
+    <form action="/detect" method="POST">
+        <label for="image_url">Enter Image URL:</label>
+        <input type="text" id="image_url" name="image_url" required>
+        <button type="submit">Detect Faces</button>
+    </form>
+    <div>
+        <% if (resultImage) { %>
+            <h2>Detected Faces:</h2>
+            <img src="<%= resultImage %>" alt="Detected Faces">
+        <% } %>
+    </div>
+</body>
+</html>
